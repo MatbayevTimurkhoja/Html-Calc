@@ -12,6 +12,7 @@
 }
 
 body{
+   height: 100vh;
    font-size: 16px;
    background-color: #000;
    font-family: 'Roboto', sans-serif;
@@ -22,6 +23,10 @@ body{
 
 img{
    display: inline-block;
+}
+
+:root{
+   --mainColor: #00FFFF;
 }
 
 .container{
@@ -41,13 +46,13 @@ img{
    top: 5px;
    width: 60px;
    height: 50px;
-   border: 3px solid rgb(255,180,0);
+   border: 3px solid var(--mainColor);
 }
 
 .mainLetter h2{
    font-size: 40px;
    font-weight: 700;
-   color: rgb(255,180,0);
+   color: var(--mainColor);
    text-align: center;
 }
 
@@ -60,12 +65,64 @@ img{
    font-family: 'Merriweather', serif;
    font-size: 30px;
    font-weight: 700;
-   color: rgb(255,180,0);
+   color: var(--mainColor);
 }
 
 .nameLogo{
    font-family: 'Merriweather', serif;
    font-weight: 900;
    letter-spacing: 1px;
-   color: #ffb400;
+   color: var(--mainColor);
+}
+
+/* ============================= Structure calculator =============================  */
+.main__sectionContainer{
+   
+}
+
+.mainSection__calc{
+   position: absolute;
+   top: calc(50% - 250px);
+   left: 0;
+   right: 0;
+   margin: 0px auto;  
+   width: 360px; 
+   height: 500px;
+   border-radius: 12px;
+   backdrop-filter: blur(10px) saturate(200%);
+   background-color: rgba(17, 25, 40, 0.30);
+   border: 1px solid rgba(255, 255, 255, 0.125);
+   -webkit-backdrop-filter: blur(10px) saturate(200%);
+}
+
+.mainSection__calc--display{
+   margin: 20px auto;
+   width: 98%;
+   height: 50px;
+   background: #000;
+}
+
+.mainSection__buttons{
+   padding-top: 15px;
+}
+
+.mainSection__calcBtn{
+   position: relative;
+   left: 6px;
+   width: 64px;
+   height: 64px;
+   transition: 0.5s;
+   cursor: pointer;
+   color: #E3F5F4;
+   margin-left: 15px;
+   font-size: 20px;
+   font-weight: 900; 
+   font-family: 'Merriweather', serif;
+   background-color: rgba(17, 25, 40, 0.60);
+}
+
+
+.speratedBtn{
+   font-size: 16px;
+   color: var(--mainColor);
 }
